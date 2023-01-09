@@ -60,16 +60,16 @@ const showPerson = () => {
 nextBtn.addEventListener("click", () => {
   currItem++;
   if (currItem > reviews.length - 1) currItem = 0; //so that currItem wont go outOfIndex
-  showPerson(currItem);
+  showPerson();
 });
 
 prevBtn.addEventListener("click", () => {
   currItem--;
   if (currItem < 0) currItem = reviews.length - 1;
-  showPerson(currItem);
+  showPerson();
 });
 
 randomBtn.addEventListener("click", () => {
   currItem = Math.floor(Math.random() * reviews.length);
-  showPerson(currItem);
+  showPerson();
 });
